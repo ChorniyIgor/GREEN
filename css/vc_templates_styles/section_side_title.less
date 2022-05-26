@@ -1,0 +1,22 @@
+.section_side_title{
+  writing-mode: vertical-rl;
+  position: absolute;
+  left: calc(-4vw + 10px);
+  top: 0px;
+  font-weight: bold;
+  transform: rotate(180deg) translateY(100%);
+  transform-origin: 0% 100%;
+  font-size: 63px;
+  letter-spacing: 2px;
+  color: @decorationColor;
+  text-transform: uppercase;
+  line-height: 1;
+  white-space: nowrap;
+  z-index: 10;
+  &--right{
+    right: calc(-4vw - 50px);
+    left: auto;
+    transform: rotate(180deg);
+    transform-origin: center;
+  }
+}

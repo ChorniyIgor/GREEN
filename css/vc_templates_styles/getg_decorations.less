@@ -1,0 +1,124 @@
+.getg_horizontal_line{
+  .border_bottom;
+  width: 100vw;
+  z-index: 2;
+}
+.getg_horizontal_line--header{
+  .border_bottom--header;
+}
+.getg_horizontal_line--container{
+  position: absolute;
+  left: calc((1170px - 100vw)/2 + 7.5px);
+}
+.decoration_square--vertical_left_line{
+  width: 30vw;
+  background: #e1f0cc;
+  height: 130%;
+  position: absolute;
+  z-index: 1;
+  top: -20%;
+  left: 5vw;
+}
+
+.decoration_before{
+  content: "";
+  position: absolute;
+  background: #e1f0cc;
+  display: block!important;
+  height: 30vh;
+  width: 35vw;
+}
+.decoration_square{
+  position: relative;
+  overflow: inherit!important;
+  &--right_bottom{
+    &:before{
+      .decoration_before;
+      left: 70%;
+      bottom: 20px;
+    }
+  }
+  &--left_top{
+    &:before{
+      .decoration_before;
+      right: 70%;
+      top: -1px;
+    }
+  }
+  &--right_top{
+    &:before{
+      .decoration_before;
+      left: 68%;
+      top: -1px;
+    }
+  }
+  &--right_vertical_column{
+    &:before{
+      .decoration_before;
+      height: 120%;
+      width: 20vw;
+      right: 12%;
+      top: -10%;
+    }
+  }
+}
+@media (max-width: 1170px) {
+  .getg_horizontal_line{
+    //left: calc(7.5px - 34px);
+  }
+}
+
+@media (max-width: 769px) {
+  .decoration_square--right_bottom:before {
+    bottom: 40vh;
+    z-index: -1;
+  }
+  .decoration_square--left_top:before {
+    height: 22vh;
+    width: 35vw;
+    right: -3%;
+    top: -125px;
+    z-index: -1;
+  }
+  .decoration_square--right_top:before {
+    height: 22vh;
+    width: 35vw;
+    right: -3%;
+    top: -125px;
+    z-index: -1;
+  }
+  .decoration_square--right_vertical_column:before{
+      height: 110%;
+      width: 20vw;
+      left: 68%;
+      top: -5%;
+  }
+  .grey-row{
+    .decoration_square--left_top:before,
+    .decoration_square--right_bottom:before,
+    .decoration_square--right_top:before {
+      z-index: 1;
+    }
+  }
+}
+
+@media (max-width: 1270px) {
+  .getg_horizontal_line--container{
+    position: absolute;
+    left: -3.5vw;
+  }
+}
+
+@media (max-width: 890px) {
+  .getg_horizontal_line--container{
+    position: absolute;
+    left: -3vw;
+  }
+}
+
+@media (max-width: 500px) {
+  .getg_horizontal_line--container{
+    position: absolute;
+    left: -2.5vw;
+  }
+}

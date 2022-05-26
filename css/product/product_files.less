@@ -1,0 +1,38 @@
+.product_files{
+  h3{
+    font-size: 1em;
+    color: rgb(34, 38, 41);
+    font-weight: bold;
+    line-height: 1.25;
+  }
+  a{
+    padding-left: 35px;
+    display: block;
+    margin-top: 20px;
+    font-size: 1em;
+    font-family: "Open Sans";
+    color: rgb(34, 38, 41);
+    line-height: 1.25;
+    text-decoration: none;
+    position: relative;
+    &:before{
+      content: "";
+      width: 22px;
+      height: 32px;
+      display: block;
+      position: absolute;
+      left: 0px;
+      top: 50%;
+      transform: translateY(-50%);
+      background: url(https://dev.getg.me/wp-content/uploads/2020/12/pdf.png) center no-repeat;
+      background-size: contain;
+    }
+  }
+}
+
+@media (max-width:769px) {
+  .product_files {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+}

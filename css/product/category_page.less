@@ -1,0 +1,135 @@
+.category_page {
+  .post_title a{
+    font-size: 2em;
+    color: rgb(34, 38, 41);
+    font-weight: bold;
+    line-height: 1.2;
+    text-align: left;
+    text-decoration: none;
+    display: block;
+    margin-top: 20px;
+    margin-bottom: 30px;
+    &:hover{
+      transform: scale(1);
+    }
+  }
+  .post_information{
+    text-align: right;
+  }
+  .post_description{
+    font-size: 1em;
+    line-height: 1.5;
+    text-align: left;
+    color: rgb(0, 0, 0);
+  }
+
+  article {
+    position: relative;
+    z-index: 5;
+    transition: all 0.3s;
+    .site-btn{
+      padding: 15px 20px;
+      min-width: 160px;
+      margin-top: 40px;
+      &:hover{
+        transform: scale(1);
+        background: #86c232;
+        color: white;
+      }
+    }
+    &:hover{
+      background: #edf6e0;
+    }
+    .post-item {
+      display: flex;
+      padding-top: 40px;
+      padding-bottom: 40px;
+      .post_image {
+        margin-right: 30px;
+        img{
+          box-shadow: 0px 15px 20px 0px rgba(0, 0, 0, 0.15);
+          max-height: 325px;
+          max-width: 450px;
+          width: auto;
+          height: auto;
+        }
+      }
+    }
+
+    &:nth-child(2n) .post-item {
+      flex-direction: row-reverse;
+      .post_information{
+        text-align: left;
+      }
+      .post_title a{
+        text-align: right;
+      }
+      .post_image {
+        margin-left: 30px;
+      }
+      .post_description{
+        text-align: right;
+      }
+    }
+  }
+}
+
+.category-automotive .category_page article .post-item .post_image img{
+  box-shadow: none;
+}
+
+.category_page__descr--container{
+  margin-top: -50px;
+  padding-bottom: 40px;
+}
+.category_page__descr{
+  padding-top: 80px;
+  font-size: 1em;
+  line-height: 1.5;
+}
+
+@media (max-width: 900px) {
+  .category_page .post_title a{
+    font-size: 1.7em;
+    margin-top: 0;
+  }
+  .category_page .post_description{
+    font-size: 0.9em;
+  }
+  .post_image{
+    img{
+      max-width: 35vw;
+      height: auto;
+    }
+  }
+}
+
+@media (max-width: 700px) {
+  .category_page__descr {
+    padding-top: 20px;
+  }
+  .category_page article .post-item,
+  .category_page article:nth-child(2n) .post-item
+  {
+    flex-direction: column-reverse;
+    .post_image{
+      margin-top: 20px;
+      text-align: center;
+      margin-right: 0;
+      margin-left: 0;
+      img{
+        max-width: 100%;
+        margin: auto;
+      }
+    }
+  }
+  .category_page article:nth-child(n) .post-item .post_information{
+    text-align: center;
+  }
+  .category_page article:nth-child(n) .post-item .post_title a,
+  .category_page article:nth-child(n) .post-item .post_description{
+    text-align: left;
+  }
+}
+
+

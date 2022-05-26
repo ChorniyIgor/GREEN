@@ -1,0 +1,67 @@
+.custom-carousel {
+  .wpcp-single-item {
+    border: none !important;
+    outline: none;
+    box-shadow: 0px 15px 20px 0px rgba(0, 0, 0, 0.15);
+    margin-bottom: 30px !important;
+    margin-top: 30px;
+  }
+  .wpcp-carousel-section.nav-vertical-center{
+    padding: 0px;
+  }
+  .wpb_content_element{
+    margin-bottom: 0;
+  }
+}
+
+  @media (min-width: 769px) {
+    .custom-carousel {
+      overflow: hidden;
+      top: -150px;
+      position: relative;
+      transform: scale(1.25);
+      transform-origin: 100% 0;
+      z-index: 100;
+      &>div{
+        width: 120%!important;
+        z-index: 100;
+      }
+      .wpcp-carousel-section.nav-vertical-center{
+        padding: 0px 25px;
+      }
+      .wpcp-carousel-wrapper{
+        left: -4vw;
+      }
+      .slick-slide{
+        left: 0vw;
+        position: relative;
+        margin-right: 0px;
+        left: -20.5%;
+        margin-right: 0px!important;
+        padding: 10px 10px;
+      }
+      .slick-next.slick-arrow{
+        left: auto;
+        bottom: 65px;
+        top: auto;
+        left: 32%;
+        z-index: 101;
+        text-align: center;
+        background: rgba(0,0,0,0.5)!important;
+        & i:hover{
+          color: white!important;
+        }
+      }
+      .slick-prev.slick-arrow{
+        left: 28%;
+        bottom: 65px;
+        top: auto;
+        text-align: center;
+        z-index: 101;
+        background: rgba(0,0,0,0.5)!important;
+        & i:hover{
+          color: white!important;
+        }
+      }
+    }
+}

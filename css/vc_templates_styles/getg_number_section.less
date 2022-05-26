@@ -1,0 +1,135 @@
+.getg_number_section{
+  padding: 20px 40px;
+  background: white;
+  box-shadow: 0px 3px 7px 0px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  z-index: 5;
+  position: relative;
+  margin-top: 30px;
+  .transition;
+  &:hover{
+    transform: scale(1.05);
+    box-shadow: 0px 20px 25px 0px rgba(0, 0, 0, 0.3);
+  }
+  &__content{
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
+    &__number{
+      display: flex;
+      justify-content: left;
+      align-items: center;
+      position: relative;
+      &__item{
+        font-size: 44px;
+        font-weight: 700;
+        color: rgb(34, 38, 41);
+        position: relative;
+        z-index: 2;
+      }
+      span.side-numb{
+        position: absolute;
+        font-size: 150px;
+        color: rgb(249, 249, 249);
+        left: 0px;
+        top: 0px;
+        font-weight: 700;
+      }
+    }
+    &__icon{
+      text-align: right;
+      img{
+        margin: auto;
+        max-width: 65px;
+      }
+    }
+    &__descr{
+      position: relative;
+      z-index: 3;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      padding-left: 20%;
+      h3{
+        font-weight: 700;
+        margin-bottom: 10px;
+      }
+    }
+  }
+
+  &--right{
+    .getg_number_section__content{
+      direction: rtl;
+
+      &__descr {
+        text-align: left;
+        padding-left: 0%;
+        padding-right: 20%;
+      }
+      &__icon {
+        text-align: left;
+      }
+      &__number {
+        justify-content: right;
+        span.side-numb{
+          right: 0px;
+          left: auto;
+          top: 0px;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 769px) {
+  .getg_number_section {
+    padding: 10px 20px;
+    margin-top: 15px;
+    &__content {
+      grid-template-columns: 1fr 3fr 1fr;
+      &__number {
+        &__item {
+          font-size: 24px;
+          font-weight: 700;
+          color: rgb(34, 38, 41);
+          position: relative;
+          z-index: 2;
+        }
+
+        span.side-numb {
+          position: absolute;
+          font-size: 70px;
+          color: rgb(249, 249, 249);
+          left: 0px;
+          top: 0px;
+          font-weight: 700;
+        }
+      }
+      &__icon{
+        position: relative;
+        img{
+          max-width: 45px;
+          position: absolute;
+          top:50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+        }
+      }
+      &__descr {
+        padding-left: 5%;
+        font-size: 14px;
+        padding-right: 5%;
+      }
+    }
+    &--right{
+      .getg_number_section__content{
+        &__descr {
+          padding-left: 5%;
+          padding-right: 5%;
+        }
+      }
+    }
+  }
+}
+
+
+

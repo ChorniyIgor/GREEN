@@ -1,0 +1,100 @@
+#nf-form-1-cont{
+  background: #f7f7f7;
+  position: relative;
+  z-index: 10;
+  padding: 10%;
+  top:-140px;
+  font-family: 'Open Sans', sans-serif;
+  box-shadow: 0px 15px 20px 0px rgba(0, 0, 0, 0.15);
+  h3{
+      font-size: 24px;
+      color: rgb(36, 165, 16);
+      font-weight: bold;
+      line-height: 1.2;
+      text-align: center;
+      margin-bottom: 40px;
+  }
+  .nf-form-fields-required{
+    font-size: 14px;
+    opacity: 0.4;
+    margin-bottom: 10px;
+    padding-left: 5px;
+  }
+  label{
+    display: none;
+  }
+  .nf-form-content .list-select-wrap .nf-field-element>div, .nf-form-content input:not([type=button]), .nf-form-content textarea{
+    border: none;
+    height: 30px;
+    padding: 8px;
+    margin-top: 0px;
+    border-bottom: 1px solid #a6a6a6;
+    color: #222629;
+    font-family: 'Open Sans', sans-serif;
+  }
+  .nf-form-content textarea{
+    height: 200px;
+    border: 1px solid #a6a6a6;
+  }
+  .nf-form-content .list-select-wrap .nf-field-element>div:focus, .nf-form-content input:not([type=button]):focus, .nf-form-content textarea:focus{
+    background: transparent;
+  }
+  .nf-error.field-wrap .nf-field-element:after{
+    display: none;
+  }
+  .nf-error .nf-error-msg{
+    font-size: 12px;
+  }
+  .nf-form-content input[type=button]{
+    background: #86c232;
+    color: white;
+    margin: auto;
+    display: block;
+    min-width: 200px;
+    &:hover{
+      background: #86c232;
+      color: white;
+      opacity: 0.7;
+    }
+  }
+  .nf-error-msg.nf-error-field-errors {
+    font-size: 14px;
+    text-align: center;
+    opacity: 0.8;
+  }
+
+  .nf-response-msg {
+    background: #86c232;
+    color: white;
+    padding: 10px 20px;
+    text-align: center;
+    font-size: 15px;
+    line-height: 1.4;
+    margin-bottom: 20px;
+  }
+}
+
+@media (max-width: 769px) {
+  #nf-form-1-cont{
+    top: 0px;
+    margin-top: 40px;
+    margin-bottom: 40px;
+    box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.15);
+    padding: 10% 7%;
+    h3{
+      max-width: 230px;
+      margin: auto;
+      font-size: 20px;
+      margin-bottom: 20px;
+    }
+    .nf-field-container{
+      margin-bottom: 15px;
+    }
+  }
+  #nf-form-1-cont .nf-form-content .list-select-wrap .nf-field-element > div, #nf-form-1-cont .nf-form-content input:not([type=button]), #nf-form-1-cont .nf-form-content textarea{
+    font-size: 14px;
+  }
+  #nf-form-1-cont .nf-form-content textarea{
+    height: 100px;
+  }
+}

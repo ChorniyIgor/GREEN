@@ -1,0 +1,28 @@
+.partners {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  margin-top: 15px;
+}
+.grayscale_on_hover {
+  filter: grayscale(100%);
+  -webkit-filter: grayscale(100%);
+  opacity: 0.15;
+  -webkit-transition: all 0.3s;
+  -moz-transition: all 0.3s;
+  -ms-transition: all 0.3s;
+  -o-transition: all 0.3s;
+  transition: all 0.3s;
+}
+.grayscale_on_hover:hover {
+  filter: grayscale(0%);
+  -webkit-filter: grayscale(0%);
+  opacity: 1;
+}
+.partners > img {
+  max-width: 75px;
+  margin: 7px 10px;
+  height: auto;
+}
+/*# sourceMappingURL=partners.css.map */

@@ -1,0 +1,43 @@
+.breadcrumbs{
+  &.container{
+    min-height: auto;
+    font-size: 14px;
+    color: white;
+    line-height: 1.6;
+    padding-top: 3px;
+    padding-bottom: 3px;
+    a{
+      color: #9cea91;
+      text-decoration: none;
+      font-size: 14px;
+      line-height: 1.6;
+      text-transform: capitalize;
+      &:hover{
+        transform: scale(1);
+      }
+    }
+  }
+}
+.breadcrumbs-sep{
+  margin-left: 5px;
+  margin-right: 5px;
+  color: #9cea91;
+}
+.breadcrumbs-container{
+  background: #00000057;
+  margin-top: 120px;
+  position: absolute;
+  top: 0px;
+  width: 100%;
+  z-index: 20;
+  transition: all 0.2s linear;
+}
+.site-header--small ~ nav ~ .breadcrumbs-container{
+  top:-120px;
+}
+
+@media (max-width: 900px){
+  .breadcrumbs-container {
+    margin-top: 80px;
+  }
+}
